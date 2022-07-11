@@ -7,6 +7,18 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import $ from 'jquery';
+import select2 from 'select2';
+import 'select2/dist/css/select2.css';
+import 'bootstrap';
+
+$(document).ready(function() {
+  $('#animal').select2({
+    tags: true,
+    dropdownAutoWidth: true,
+    width: 400
+  });
+});
 
 Rails.start()
 Turbolinks.start()
